@@ -1,0 +1,23 @@
+# Python
+*.pyc
+*~
+__pycache__/
+
+# Environment
+.env
+myvenv/
+venv/
+
+# Database
+db.sqlite3
+
+# Generated static files
+/static/
+
+# Windows
+Thumbs.db*
+[Dd]esktop.ini
+
+# VS Code
+.vscode/
+.env.txt
