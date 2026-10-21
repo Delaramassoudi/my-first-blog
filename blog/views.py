@@ -41,3 +41,12 @@ def post_edit(request, pk):
 
     return render(request, 'blog/post_edit.html', {'form': form})
     # return HttpResponse("Hello")
+@login_required
+def post_delete(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+
+    if request.method == "POST":
+        post.delete()
+        return redirect('post_list')
+
+    return render(request, 'blog/post_confirm_delete.html', {'post': post})  
